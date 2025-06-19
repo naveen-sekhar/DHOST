@@ -1,0 +1,11 @@
+Sub UnhideProtectedSheet()
+    Dim pw As String
+    pw = InputBox("Enter password to view the sheet:")
+    
+    If pw = "yourpassword" Then
+        Sheets("YourSheetName").Visible = True
+        Sheets("YourSheetName").Select
+    Else
+        MsgBox "Incorrect password!"
+    End If
+End Sub
